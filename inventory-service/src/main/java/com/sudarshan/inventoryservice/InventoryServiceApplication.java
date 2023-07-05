@@ -19,14 +19,24 @@ public class InventoryServiceApplication {
     return args -> {
       Inventory inventory = new Inventory();
       inventory.setSkuCode("pixel7");
-      inventory.setQuantity(0);
+      inventory.setQuantity(5);
 
       Inventory inventory1 = new Inventory();
       inventory1.setSkuCode("iphone14");
-      inventory1.setQuantity(2);
+      inventory1.setQuantity(3);
+
+      Inventory inventory2 = new Inventory();
+      inventory2.setSkuCode("galaxys21");
+      inventory2.setQuantity(8);
+
+      Inventory inventory3 = new Inventory();
+      inventory3.setSkuCode("oneplus10");
+      inventory3.setQuantity(0);
 
       inventoryRepository.save(inventory);
       inventoryRepository.save(inventory1);
+      inventoryRepository.save(inventory2);
+      inventoryRepository.save(inventory3);
     };
   }
 }

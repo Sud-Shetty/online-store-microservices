@@ -44,25 +44,33 @@ public class OrderService {
         .toList();
     order.setOrderLineItemsList(orderLineItemsList);
     log.info("order request received for order id {}",order.getOrderNumber());
+    try {
+      //Call inventory service and place order if all the products are in stock.
+      boolean allProductsInStock = Boolean.TRUE.equals(webClientBuilder.build().post()
+          .uri("http://inventory-service:8686/api/v1/inventory/isinstock")
+          .contentType(MediaType.APPLICATION_JSON)
+          .body(BodyInserters.fromValue(orderLineItemsList))
+          .retrieve()
+          .bodyToMono(Boolean.class)
+          .block());
 
-    //Call inventory service and place order if all the products are in stock.
-    boolean allProductsInStock = Boolean.TRUE.equals(webClientBuilder.build().post()
-        .uri("http://inventory-sevice/api/v1/inventory/isinstock")
-        .contentType(MediaType.APPLICATION_JSON)
-        .body(BodyInserters.fromValue(orderLineItemsList))
-        .retrieve()
-        .bodyToMono(Boolean.class)
-        .block());
+      log.info("received isInStock as {}", allProductsInStock);
 
-    log.info("received isInStock as {}",allProductsInStock);
-
-    if(allProductsInStock){
-      orderRepository.save(order);
-      applicationEventPublisher.publishEvent(new OrderPlacedEvent(this, order.getOrderNumber()));
-      log.info("order placed event published");
-      return "Order placed successfully!";
-    }else{
-      throw new IllegalArgumentException("One or more items are not in stock, please check and try again!");
+      if (allProductsInStock) {
+        orderRepository.save(order);
+        applicationEventPublisher.publishEvent(new OrderPlacedEvent(this, order.getOrderNumber()));
+        log.info("order placed event published");
+        return "Order placed successfully!";
+      } else {
+        throw new IllegalArgumentException(
+            "One or more items are not in stock, please check and try again!");
+      }
+    }catch (IllegalArgumentException iae){
+      log.error("Exception is:", iae);
+      return iae.getMessage();
+    }catch (Exception e){
+      log.error("Exception is:", e);
+      return "Oops! Something went wrong.";
     }
 
   }

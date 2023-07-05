@@ -97,6 +97,7 @@ services:
   order-service:
     container_name: order-service
     build: order-service
+
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - SPRING_DATASOURCE_URL=jdbc:h2:mem:orderdb
@@ -110,6 +111,10 @@ services:
   inventory-service:
     container_name: inventory-service
     build: inventory-service
+    ports:
+      - "8686:8686"
+    expose:
+      - "8686"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - SPRING_DATASOURCE_URL=jdbc:h2:mem:inventorydb
