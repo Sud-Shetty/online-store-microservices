@@ -29,7 +29,7 @@ Follow the steps below to set up and run the project:
 1. Clone the repository to your local machine.
 2. Navigate to the 'online-store-microservices' folder.
 3. Run the following command to build and run the tests: $ mvn clean verify
-4. Start the microservices using Docker by running the following command: $ docker-compose up -d
+4. Start the microservices using Docker by running the following command: $ docker compose up -d
 5. Open Postman and import the [Microservices.postman_collection.json](Microservices.postman_collection.json) API collection to test the APIs.
 
 Please make sure you have the necessary dependencies and configurations in place before running the project. Refer to the official documentation of each tool for installation instructions if needed.
