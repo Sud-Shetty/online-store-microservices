@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-import com.sudarshan.orderservice.model.OrderLineItems;
-
 @Data
 @Builder
 @NoArgsConstructor

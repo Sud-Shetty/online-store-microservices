@@ -2,13 +2,17 @@ package com.sudarshan.productservice;
 
 import java.math.BigDecimal;
 
+import org.apache.commons.math.stat.descriptive.summary.Product;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
@@ -25,7 +29,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @TestPropertySource(locations="classpath:application-test.properties")
 @AutoConfigureMockMvc
 class ProductServiceApplicationTests {
-
   @Autowired
   private MockMvc mockMvc;
   @Autowired
@@ -45,6 +48,7 @@ class ProductServiceApplicationTests {
   }
 
   @Test
+  @Sql("create-product.sql")
   void shouldGetAllProducts() throws Exception {
     mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/product"))
         .andExpect(status().isOk())
