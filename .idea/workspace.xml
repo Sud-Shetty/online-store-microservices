@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb2351a-fdd5-418c-84e7-b615ddc904a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/com/sudarshan/inventoryservice/create-inventory.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sudarshan/orderservice/helper/WebClientHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/resources/com/sudarshan/orderservice/create-order.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/test/resources/com/sudarshan/productservice/create-product.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Microservices.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/sudarshan/inventoryservice/OrderLineItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/sudarshan/inventoryservice/OrderLineItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/sudarshan/inventoryservice/InventoryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/sudarshan/inventoryservice/InventoryServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sudarshan/orderservice/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sudarshan/orderservice/dto/OrderRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sudarshan/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sudarshan/orderservice/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/sudarshan/orderservice/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/sudarshan/orderservice/OrderServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/sudarshan/productservice/dto/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/sudarshan/productservice/dto/ProductResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/sudarshan/productservice/ProductServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/sudarshan/productservice/ProductServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/test/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +80,9 @@
       <recent name="C:\Users\Sudarshana.Shetty1\Desktop\online-store-microservices\inventory-service" />
       <recent name="C:\Users\Sudarshana.Shetty1\Desktop\online-store-microservices\order-service" />
       <recent name="C:\Users\Sudarshana.Shetty1\Desktop\online-store-microservices\product-service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sudarshana.Shetty1\Desktop\online-store-microservices" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sudarshan.inventoryservice" />
@@ -255,7 +245,7 @@
       <workItem from="1688221696093" duration="5312000" />
       <workItem from="1688231048482" duration="43005000" />
       <workItem from="1688409874222" duration="7394000" />
-      <workItem from="1688654892437" duration="26137000" />
+      <workItem from="1688654892437" duration="28698000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "8749766b-cda2-4bbb-b15f-a39e6f16deff",
+		"name": "Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23445770",
+		"_collection_link": "https://interstellar-trinity-374646.postman.co/workspace/New-Team-Workspace~1d11a7fb-e24c-473d-83ae-e367667d6ecf/collection/23445770-8749766b-cda2-4bbb-b15f-a39e6f16deff?action=share&creator=23445770&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "getAllProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"pixel7\",\r\n        \"description\": \"Google pixel 7\",\r\n        \"price\": 80000.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"pixel7\",\r\n    \"description\": \"Google pixel 7\",\r\n    \"price\": 90000.00\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "placeOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderLineItemsDtoList\":[\r\n        {\r\n            \"skuCode\":\"iphone14\",\r\n            \"price\":135000.00,\r\n            \"quantity\":2\r\n        } , {\r\n            \"skuCode\":\"pixel7\",\r\n            \"price\":135000.00,\r\n            \"quantity\":3\r\n        } ,{\r\n           \"skuCode\":\"galaxys21\",\r\n            \"price\":135000.00,\r\n            \"quantity\":1\r\n        }  \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8181/api/v1/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8181/api/v1/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"api",
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "isInStock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n        {\r\n            \"skuCode\":\"iphone14\",\r\n            \"price\":135000.00,\r\n            \"quantity\":2\r\n        } ,{\r\n            \"skuCode\":\"pixel7\",\r\n            \"price\":13000.00,\r\n            \"quantity\":3\r\n        }  \r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8686/api/v1/inventory/isinstock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"isinstock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllInventoryItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8686/api/v1/inventory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"api",
+								"v1",
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "actuator health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
